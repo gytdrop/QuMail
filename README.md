@@ -1,21 +1,37 @@
-# QuMail: Quantum Key Distribution (QKD) Secure Messaging 🚀
+# QuMail: Quantum-Safe Messaging System 🚀
 
-QuMail is a specialized secure communication system inspired by **ISRO's SAQTI mission**. It leverages the laws of quantum mechanics to ensure that encryption keys are shared with absolute security. If an eavesdropper attempts to intercept the key, the quantum state collapses, and the system automatically aborts the transmission.
+QuMail is a secure communication platform inspired by **ISRO's SAQTI mission**. It uses **Quantum Key Distribution (QKD)** to generate unbreakable encryption keys that are immune to eavesdropping and future quantum computer attacks.
+
+## 🛡️ How it Works
+QuMail operates on the principle of **Quantum Mechanics**. Unlike standard email which uses math-based encryption, QuMail uses the **BB84 Protocol** to share a secret key via simulated polarized photons.
 
 
 
-## 🌟 Key Features
-- **Quantum Handshake:** Uses IBM's **Qiskit** to simulate the BB84 protocol for key generation.
-- **Unbreakable Encryption:** Implements **One-Time Pad (OTP)** via XOR cipher, mathematically secure against quantum computer attacks.
-- **Eavesdropper Detection:** Real-time calculation of **Quantum Bit Error Rate (QBER)** to detect hackers (Eve).
-- **Cross-Platform Support:** Adaptive terminal handling for Windows (CMD/PowerShell), Linux, and macOS.
-- **Auto-Bootstrapper:** Automatically detects and installs missing dependencies (Qiskit, Numpy) on launch.
+### 1. Quantum Handshake (The Start)
+When you launch `main.py`, the system initiates a handshake. Alice (the sender) and Bob (the receiver) exchange qubits using **IBM Qiskit**. They only keep the bits where their measurement bases match.
 
-## 🛠️ Project Structure
-```text
-QuMail/
-├── main.py               # Orchestrator & UI (The Control Center)
-├── quantum_engine.py     # Qiskit-based BB84 Simulation
-├── encryption.py         # OTP XOR Cipher Logic
-├── sync_timing.py        # NavIC-inspired timestamping
-└── README.md             # Documentation
+**Expected Output:**
+> *Quantum Key Established: 64 bits*
+> *Link Secure. QBER: 0.0%*
+
+### 2. XOR Encryption (The Lock)
+Once the key is shared, QuMail uses a **One-Time Pad (OTP)** cipher. This transforms your plain text into a binary ciphertext that is mathematically impossible to crack without the quantum key.
+
+
+
+### 3. Decryption (The Recovery)
+On the receiving end, the same Quantum Key is applied to the ciphertext to perfectly reconstruct the original message.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Python 3.8+
+- `pip install qiskit qiskit-aer numpy psutil`
+
+### Installation
+```bash
+git clone [https://github.com/gytdrop/QuMail.git](https://github.com/gytdrop/QuMail.git)
+cd QuMail
+python main.py
