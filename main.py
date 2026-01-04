@@ -1,4 +1,5 @@
 import checking
+import time
 from quantum_engine import QuEngine
 from sync_timing import get_navic_timestamp
 import sync_timing as navic
@@ -11,6 +12,7 @@ def run_qumail():
     print("------------ Initialising QuMail ------------")
 #starting the Quantum Handshake
 #-------------------------------
+    print(f"checking{time.sleep(1)}.{time.sleep(1)}.{time.sleep(1)}.")
     engine = QuEngine()
     shared_key , s_bits, r_results = engine.generate_quantum_key(120)
    
