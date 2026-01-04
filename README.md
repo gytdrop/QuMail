@@ -1,8 +1,8 @@
-# QuMail: Quantum-Safe Messaging System 🚀
+# QuMail: Quantum-Safe Messaging System 
 
 QuMail is a secure communication platform inspired by **ISRO's SAQTI mission**. It uses **Quantum Key Distribution (QKD)** to generate unbreakable encryption keys that are immune to eavesdropping and future quantum computer attacks.
 
-## 🛡️ How it Works
+##  How it Works
 QuMail operates on the principle of **Quantum Mechanics**. Unlike standard email which uses math-based encryption, QuMail uses the **BB84 Protocol** to share a secret key via simulated polarized photons.
 
 
@@ -24,7 +24,7 @@ On the receiving end, the same Quantum Key is applied to the ciphertext to perfe
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Python 3.8+
@@ -34,4 +34,32 @@ On the receiving end, the same Quantum Key is applied to the ciphertext to perfe
 ```bash
 git clone [https://github.com/gytdrop/QuMail.git](https://github.com/gytdrop/QuMail.git)
 cd QuMail
-python main.py
+python main.py```
+```
+##  System Workflow
+
+### Step 1: Quantum Handshake
+The system uses Qiskit to simulate a quantum channel. 
+
+
+![checking](assets/init.png)
+
+### The initialization
+
+![checkings](assets/inits.png)
+
+
+### if there is someone listening
+![if fails](assets/fail.png)
+
+
+### Step 2: XOR Encryption
+Once the key is verified, we apply a One-Time Pad (OTP) cipher.
+### when no eavesdropper
+![the message](assets/msg.png)
+
+### the message is transmitted
+![output](assets/output.png)
+
+### Step 3: NavIC Sync
+The session is timestamped using satellite-inspired synchronization.
