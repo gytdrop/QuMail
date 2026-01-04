@@ -1,4 +1,5 @@
 import checking
+import time
 from quantum_engine import QuEngine
 from sync_timing import get_navic_timestamp
 import sync_timing as navic
@@ -11,6 +12,7 @@ def run_qumail():
     print("------------ Initialising QuMail ------------")
 #starting the Quantum Handshake
 #-------------------------------
+    print(f"checking{time.sleep(1)}.{time.sleep(1)}.{time.sleep(1)}.")
     engine = QuEngine()
     shared_key , s_bits, r_results = engine.generate_quantum_key(120)
    
@@ -25,8 +27,8 @@ def run_qumail():
 #encrypting the message
 
     message = input("Enter your secret message:\n\n")
-    vault = QuVault()
-    encrypted_mail = vault.xor_cipher(message, shared_key)
+    
+    encrypted_mail = QuVault.xor_cipher(message, shared_key)
 #---------------------------------
     print(f'\n[+] sync ID: {navic.get_navic_timestamp()}')
     print(f'[+] Encrypted Qumail Payload: {encrypted_mail}')

@@ -9,7 +9,7 @@
 #------------------------------------
 class QuVault:
     @staticmethod
-    def xor_cipher(self,message, bit_key):
+    def xor_cipher(message, bit_key):
         messageBin = ''.join(format((ord(i), '08b') for i in message))
 
         encryptedBits = ''
