@@ -12,7 +12,15 @@ def run_qumail():
     print("------------ Initialising QuMail ------------")
 #starting the Quantum Handshake
 #-------------------------------
-    print(f"checking{time.sleep(1)}.{time.sleep(1)}.{time.sleep(1)}.")
+    print(f"checking",end='')
+    time.sleep(0.5)
+    print(".",end='')
+    time.sleep(0.5)
+    print(".",end='')
+    time.sleep(0.5)
+    print(".",end='')
+    time.sleep(0.5)
+
     engine = QuEngine()
     shared_key , s_bits, r_results = engine.generate_quantum_key(120)
    
