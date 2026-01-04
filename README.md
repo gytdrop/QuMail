@@ -63,3 +63,26 @@ Once the key is verified, we apply a One-Time Pad (OTP) cipher.
 
 ### Step 3: NavIC Sync
 The session is timestamped using satellite-inspired synchronization.
+
+
+
+## Security Warning & Simulation Limits
+
+This project is a **Quantum Simulation** designed for educational and research purposes. It is important to distinguish between this software model and a physical QKD deployment.
+
+### Simulation vs. Real Hardware (ISRO SAQTI)
+
+| Feature | QuMail Simulation (This Repo) | Physical QKD (ISRO/SAC) |
+| :--- | :--- | :--- |
+| **Qubits** | Mathematical objects in Qiskit | Single Photons (Light particles) |
+| **Channel** | Local CPU/Standard Internet | Fiber Optic or Satellite Laser Link |
+| **Eavesdropping** | Detected by software logic | Detected by the Laws of Physics |
+| **Randomness** | Pseudo-random numbers (Numpy) | True Quantum Randomness (QRNG) |
+| **Cloning** | Theoretically possible to "copy" variables | Physically impossible (No-Cloning Theorem) |
+
+
+
+### Real-World Threat Model
+In a real-world scenario, the "Quantum Channel" is a physical beam of light. If a hacker (Eve) intercepts a photon, the act of measuring it changes its state forever. In our simulation, we mimic this behavior using Qiskit's `Aer` simulator to ensure the logic of the **BB84 Protocol** is preserved.
+
+---
