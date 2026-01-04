@@ -10,12 +10,11 @@
 class QuVault:
 
     def xor_cipher(message, bit_key):
-        messageBin = ''.join(format((ord(i), '08b') for i in message))
+        messageBin = ''.join(format(ord(i), '08b') for i in message)
 
         encryptedBits = ''
         for i in range(len(messageBin)):
             m_bit = int(messageBin[i])
             k_bit = int(bit_key[i%len(bit_key)])
-            encrypteBite += str(m_bit^k_bit)
+            encryptedBits += str(m_bit^k_bit)
         return encryptedBits
-
