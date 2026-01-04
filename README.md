@@ -86,3 +86,8 @@ This project is a **Quantum Simulation** designed for educational and research p
 In a real-world scenario, the "Quantum Channel" is a physical beam of light. If a hacker (Eve) intercepts a photon, the act of measuring it changes its state forever. In our simulation, we mimic this behavior using Qiskit's `Aer` simulator to ensure the logic of the **BB84 Protocol** is preserved.
 
 ---
+>The project is still incomplete.
+>It is a Quantum seeding cryptography encryption
+>The reciever's algorithm is still pending
+>The QuMail will be updated soon.
+>Stay Tune !
