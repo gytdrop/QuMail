@@ -12,10 +12,8 @@ import numpy as np
 class QuEngine:
     def create_qubit(self, bit, basis):
         q = qc(1,1)
-
         if bit ==1:
             q.x(0)
-
         if basis == 1:
             q.h(0)
         return q
@@ -32,7 +30,6 @@ class QuEngine:
         if basis == 1:
             q.h(0)
         q.measure(0,0)
-
         backend = Aer.get_backend("qasm_simulator")
         job = backend.run(tp(q,backend), shots=1, memory=True)
         result = job.result().get_memory()[0]
@@ -50,7 +47,7 @@ class QuEngine:
     def generate_quantum_key(self,n=100):
         senderBits = np.random.randint(2,size=n)
         recieverBits = np.random.randint(2,size=n)
-
+        
         senderBases = np.random.randint(2,size=n)
         recieverBases = np.random.randint(2,size=n)
 
