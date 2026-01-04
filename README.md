@@ -32,7 +32,7 @@ On the receiving end, the same Quantum Key is applied to the ciphertext to perfe
 
 ### Installation
 ```bash
-git clone [https://github.com/gytdrop/QuMail.git](https://github.com/gytdrop/QuMail.git)
+git clone https://github.com/gytdrop/QuMail.git
 cd QuMail
 python main.py
 ```
