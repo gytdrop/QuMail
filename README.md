@@ -1,10 +1,10 @@
-# QuMail: Quantum Key Distribution (QKD) Secure Messaging 🚀
+# QuMail: Quantum Key Distribution (QKD) Secure Messaging
 
 QuMail is a specialized secure communication system inspired by **ISRO's SAQTI mission**. It leverages the laws of quantum mechanics to ensure that encryption keys are shared with absolute security. If an eavesdropper attempts to intercept the key, the quantum state collapses, and the system automatically aborts the transmission.
 
 
 
-## 🌟 Key Features
+##  Key Features
 - **Quantum Handshake:** Uses IBM's **Qiskit** to simulate the BB84 protocol for key generation.
 - **Unbreakable Encryption:** Implements **One-Time Pad (OTP)** via XOR cipher, mathematically secure against quantum computer attacks.
 - **Eavesdropper Detection:** Real-time calculation of **Quantum Bit Error Rate (QBER)** to detect hackers (Eve).
