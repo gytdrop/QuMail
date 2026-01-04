@@ -34,7 +34,7 @@ On the receiving end, the same Quantum Key is applied to the ciphertext to perfe
 ```bash
 git clone [https://github.com/gytdrop/QuMail.git](https://github.com/gytdrop/QuMail.git)
 cd QuMail
-python main.py```
+python main.py
 ```
 ##  System Workflow
 
